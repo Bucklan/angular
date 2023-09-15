@@ -7,14 +7,13 @@ import {Post} from "../post.model";
   styleUrls: ['./post-create.component.css'],
 })
 export class PostCreateComponent {
-  enteredContent = '';
   enteredTitle = '';
+  enteredBoolean = false;
  @Output()  postCreated = new EventEmitter<Post>();
-
   onAddPost() {
     const post: Post = {
       title: this.enteredTitle,
-      content: this.enteredContent,
+      done: false,
     }
     this.postCreated.emit(post);
   }

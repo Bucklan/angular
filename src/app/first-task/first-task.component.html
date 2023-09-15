@@ -1,0 +1,16 @@
+
+<div class="todo-list" style="text-align: center">
+  <h1>TODO</h1>
+  <mat-form-field class="example-full-width">
+    <mat-label>Example Task: </mat-label>
+    <input type="text" matInput  [(ngModel)]="newTask" (keyup.enter)="addTask()">
+      <button mat-raised-button color="primary" (click)="addTask()">Add</button>
+  </mat-form-field>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let task of tasks">
+      <input type="checkbox" [(ngModel)]="task.completed" class="mr-2">
+      <span [ngClass]="{'asdasd': task.completed}">{{ task.name }}</span>
+      <button mat-raised-button color="warn" (click)="destroyTask(task)">Delete</button>
+    </li>
+  </ul>
+</div>

@@ -1,9 +1,10 @@
-<mat-accordion multi="true" *ngIf="posts.length > 0">
-  <mat-expansion-panel *ngFor="let post of posts">
-    <mat-expansion-panel-header>
+
+<mat-list role="list" *ngIf="posts.length > 0" >
+  <div *ngFor="let post of posts">
+    <mat-list-item role="listitem">
       {{post.title}}
-    </mat-expansion-panel-header>
-    <p>{{post.content}}</p>
-  </mat-expansion-panel>
-</mat-accordion>
+    </mat-list-item>
+  </div>
+</mat-list>
+
 <p *ngIf="posts.length <= 0">NO CONTENT</p>

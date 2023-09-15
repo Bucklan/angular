@@ -7,10 +7,11 @@ import {Post} from "../post.model";
 styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent {
+  public post : Post[] = [];
  @Input() posts: Post[] = [
-  {title: 'First Post',content: "This is the first post's content"},
-  {title: 'Second Post',content: "This is the second post's content"},
-  {title: 'Third Post',content: "This is the third post's content"},
+  {title: 'First Post',done: false},
+  {title: 'Second Post',done: false},
+  {title: 'Third Post',done: false},
   ];
  //  @Input() posts = [];
 }
