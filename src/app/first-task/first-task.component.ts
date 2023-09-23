@@ -2,9 +2,13 @@ import {Component} from '@angular/core'
 @Component({
   selector: 'first-project',
   templateUrl: './first-task.component.html',
+  styleUrls: ['./first-task.component.css']
 })
 export class FirstTaskComponent {
-  tasks: { name: string; completed: boolean }[] = [];
+  tasks: {
+    name: string;
+    completed: boolean
+  }[] = [];
   newTask: string = '';
 
   addTask() {
@@ -14,7 +18,9 @@ export class FirstTaskComponent {
     }
   }
 
-  destroyTask(task: { name: string; completed: boolean }) {
+  destroyTask(task:
+                { name: string; completed: boolean }
+  ) {
     const index = this.tasks.indexOf(task);
     if (index > -1) {
       this.tasks.splice(index, 1);

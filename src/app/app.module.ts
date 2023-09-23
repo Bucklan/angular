@@ -17,7 +17,6 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
 import {HeaderComponent} from "./header/header.component";
 import {PostListComponent} from "./posts/post-list/post-list.component";
 import {FirstTaskComponent} from "./first-task/first-task.component";
-import {PostDestroyComponent} from "./posts/post-destroy/post-destroy.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +25,7 @@ import {PostDestroyComponent} from "./posts/post-destroy/post-destroy.component"
     HeaderComponent,
     PostListComponent,
     FirstTaskComponent,
-    PostDestroyComponent
+
   ],
   imports: [
     FormsModule,

@@ -8,8 +8,8 @@
   </mat-form-field>
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let task of tasks">
-      <input type="checkbox" [(ngModel)]="task.completed" class="mr-2">
-      <span [ngClass]="{'asdasd': task.completed}">{{ task.name }}</span>
+      <mat-checkbox class="example-margin" [(ngModel)]="task.completed"></mat-checkbox>
+      <span class="text" [ngClass]="{'asdasd': task.completed}">{{ task.name }}</span>
       <button mat-raised-button color="warn" (click)="destroyTask(task)">Delete</button>
     </li>
   </ul>
