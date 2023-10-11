@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {Post} from "./posts/post.model";
+import {UserService} from "./user.service";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -8,9 +9,5 @@ import {Post} from "./posts/post.model";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  storedPosts: Post[] = [];
 
-  onPostAdded(post: Post){
-   this.storedPosts.push(post);
- }
 }
