@@ -1,49 +1,43 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {NgModule} from '@angular/core';
+import {forwardRef, NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
 import {AppComponent} from './app.component';
-import {FirstTaskComponent} from "./first-task/first-task.component";
-import {RegisterComponent} from "./register/register.component";
-import {LoginComponent} from "./login/login.component";
-
-import {MatInputModule} from "@angular/material/input";
-import {MatCardModule} from "@angular/material/card";
-import {MatButtonModule} from "@angular/material/button";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatExpansionModule} from "@angular/material/expansion";
-import {MatListModule} from "@angular/material/list";
-import {MatCheckboxModule} from "@angular/material/checkbox";
+import {RegisterComponent} from "./pages/register/register.component";
+import {LoginComponent} from "./pages/login/login.component";
+import {HomeComponent} from "./pages/home/home.component";
+import {ForgetPasswordComponent} from "./pages/forget-password/forget-password.component";
+import {ResetComponent} from "./pages/reset/reset.component";
+import {FooterComponent} from "./components/footer/footer.component";
+import {HeaderComponent} from "./components/header/header.component";
 
 const routes: Routes = [
-  {path: 'dashboard', component: FirstTaskComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'forget-password', component: ForgetPasswordComponent},
+  {path: 'reset', component: ResetComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstTaskComponent,
+    ForgetPasswordComponent,
+    ResetComponent,
+    HomeComponent,
     RegisterComponent,
     LoginComponent,
+    forwardRef(() => HeaderComponent),
+    forwardRef(() => FooterComponent),
+    HeaderComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MatInputModule,
-    MatCardModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatExpansionModule,
-    MatListModule,
-    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
